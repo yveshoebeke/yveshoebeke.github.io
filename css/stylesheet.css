@@ -29,6 +29,14 @@ a:hover {
     text-decoration: underline;
 }
 
+div.balloon {
+    padding: 4px;
+    color: rgb(94, 129, 139);
+    visibility: hidden;
+    border: 1px solid rgb(94, 129, 139);
+    border-radius: 4px;
+}
+
 span.work {
     border-bottom: 1px dotted maroon;
 
@@ -64,7 +72,7 @@ div#work-content {
         font-size: smaller;
     }
 
-    span#clickToClose {
+    span#click-to-close {
         float: right;
         visibility: hidden;
         padding: 4px;
@@ -83,6 +91,17 @@ p.today {
     font-size: small;
 }
 
+span#popup-action {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 4px;
+    color: rgb(94, 129, 139);
+    visibility: hidden;
+    border: 1px solid rgb(94, 129, 139);
+    border-radius: 4px;
+}
+
 p.email {
     margin-top: 10px;
     font-size: small;
@@ -91,7 +110,7 @@ p.email {
         color: maroon;
     }
 
-    span#onClipboard, span#clipboardAction {
+    span#on-clipboard, span#clipboard-action {
         padding: 4px;
         color: rgb(94, 129, 139);
         visibility: hidden;

@@ -1,4 +1,23 @@
 window.addEventListener('load', function () {
+  // Event listeners
+  document.getElementById("email-to-clipboard").addEventListener('click', copyToClipboard);
+  document.getElementById("email-to-clipboard").addEventListener('mouseover', () => {
+    showClipboardAction(true);
+  });
+  document.getElementById("email-to-clipboard").addEventListener('mouseout', () => {
+    showClipboardAction(false);
+  });
+
+  document.getElementById("work-popup").addEventListener('click', () => {
+    showWorkContent(true);
+  });
+  document.getElementById("work-popup").addEventListener('mouseover', (e) => {
+    showPopupAction(e, true);
+  });  
+  document.getElementById("work-popup").addEventListener('mouseout', (e) => {
+    showPopupAction(e, false);
+  });  
+
   startClock();
   jsonSiteDataInject();
 })
@@ -27,32 +46,46 @@ function copyToClipboard() {
   content = document.getElementById("email").innerHTML;
   navigator.clipboard.writeText(content);
 
-  document.getElementById("onClipboard").style.visibility = 'visible';
+  document.getElementById("on-clipboard").style.visibility = 'visible';
   setTimeout(function() {
-    document.getElementById("onClipboard").style.visibility = 'hidden';
+    document.getElementById("on-clipboard").style.visibility = 'hidden';
   }, 2000);
 } 
 
 function showClipboardAction(show) {
   if(show) {
-    document.getElementById("clipboardAction").style.visibility = 'visible';
+    document.getElementById("clipboard-action").style.visibility = 'visible';
   } else {
-    document.getElementById("clipboardAction").style.visibility = 'hidden';
+    document.getElementById("clipboard-action").style.visibility = 'hidden';
   }
 }
 
 function showWorkContent(show) {
-      if(show) {
-        document.getElementById("work-content").style.visibility = 'visible';
-        setTimeout(function() {
-          document.getElementById("work-content").style.visibility = 'hidden';
-        }, 60000);
+  if(show) {
+    document.getElementById("work-content").style.visibility = 'visible';
+    setTimeout(function() {
+      document.getElementById("work-content").style.visibility = 'hidden';
+    }, 60000);
 
-        document.getElementById("clickToClose").style.visibility = 'visible';
-        setTimeout(function() {
-          document.getElementById("clickToClose").style.visibility = 'hidden';
-        }, 3000);
-      } else {
-        document.getElementById("work-content").style.visibility = 'hidden';
+    document.getElementById("click-to-close").style.visibility = 'visible';
+    setTimeout(function() {
+      document.getElementById("click-to-close").style.visibility = 'hidden';
+    }, 3000);
+  } else {
+    document.getElementById("click-to-close").style.visibility = 'hidden';
+    document.getElementById("work-content").style.visibility = 'hidden';
+  }
+}
+
+function showPopupAction(e, show) {
+  if(show) {
+    x = e.clientX;
+    y = e.clientY;
+
+    document.getElementById("popup-action").style.top = (y+20).toString().concat("px");
+    document.getElementById("popup-action").style.left = (x+20).toString().concat("px");
+    document.getElementById("popup-action").style.visibility = 'visible';
+  } else {
+    document.getElementById("popup-action").style.visibility = 'hidden';
   }
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <title>Yves Hoebeke</title>
     <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
@@ -32,9 +33,9 @@
 
         <p>As a hobby, I enjoy working with microcontrollers in real world settings.</p>
 
-        <p>I have a track record of <span class="work">building systems&nbsp;<img onclick="showWorkContent(true)" src="img/popup.png" width="15" height="15"/></span> which have stood the test of time - many of which are still running today after many years.</p>
+        <p>I have a track record of <span class="work">building systems&nbsp;<img id="work-popup" src="img/popup.png" width="15" height="15"/></span> which have stood the test of time - many of which are still running today after many years.&nbsp;&nbsp;&nbsp;<span id="popup-action">See it!</span></p>
 
-        <p class="email">email: <span id="email"></span>&nbsp;<img onclick="copyToClipboard()" onmouseover="showClipboardAction(true)" onmouseout="showClipboardAction(false)"  src="img/copy-to-clipboard.png" width="10" height="10"/>&nbsp;&nbsp;<span id="clipboardAction">Copy to Clipboard</span>&nbsp;&nbsp;<span id="onClipboard">Copied!</span></p>
+        <p class="email">email: <span id="email"></span>&nbsp;<img id="email-to-clipboard" src="img/copy-to-clipboard.png" width="10" height="10"/>&nbsp;&nbsp;<span id="clipboard-action">Copy to Clipboard</span>&nbsp;&nbsp;<span id="on-clipboard">Copied!</span></p>
     </div>
 </div>
 
@@ -54,27 +55,27 @@
     <p>&copy;&nbsp;<span id="copy-year"></span>&nbsp;-&nbsp;<span id="copy-name"></span>&nbsp;-&nbsp;All rights reserved.<span id="version"></span></p>
 </div>
 
-<div id="work-content" onclick="showWorkContent(false)">
-    <p class="title">Software Engineering&nbsp;&nbsp;<span id="clickToClose">Click anywhere to close.</span></p>
+<div id="work-content">
+    <p class="title">Software Engineering&nbsp;&nbsp;<span id="click-to-close">Click anywhere to close.</span></p>
     <ul>
-        <li class="company">Discovery, New York, NY</li>
+        <li class="company">Discovery - New York, NY</li>
             <ul>
                 <li>SSAI (Server Side Ad Insertion).</li>
                 <li>Go, gRPC, AWS RDS</li>
             </ul>
         </li>
-        <li class="company">Accuity Delivery Systems, New York, NY</li>
+        <li class="company">Accuity Delivery Systems - New York, NY</li>
             <ul>
                 <li>CDI (Clinical Documentation Improvement) collaboration tool.</li>
                 <li>Go, RestAPI, PostgreSQL, some frontend HTML and JS.</li>
             </ul>
         </li>
-        <li class="company">Benchmark Education, New Rochelle, NY</li>
+        <li class="company">Benchmark Education - New Rochelle, NY</li>
         <ul>
             <li>Product evaluation, assembly and publishing.</li>
             <li>PHP, AMQP, NodeJS, mongoDB, some frontend HTML.</li>
         </ul>
-        <li class="company">General Electric, Shelton, CT</li>
+        <li class="company">General Electric - Shelton, CT</li>
         <ul>
             <li>Intelectual property data distribution support.</li>
             <li>PHP, AWS RDS, some frontend HTML and JS.</li>
