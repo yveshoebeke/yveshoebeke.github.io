@@ -82,8 +82,8 @@ function showPopupAction(e, show) {
     x = e.clientX;
     y = e.clientY;
 
-    document.getElementById("popup-action").style.top = (y+20).toString().concat("px");
-    document.getElementById("popup-action").style.left = (x+20).toString().concat("px");
+    document.getElementById("popup-action").style.top = (y+18).toString().concat("px");
+    document.getElementById("popup-action").style.left = (x+10).toString().concat("px");
     document.getElementById("popup-action").style.visibility = 'visible';
   } else {
     document.getElementById("popup-action").style.visibility = 'hidden';
