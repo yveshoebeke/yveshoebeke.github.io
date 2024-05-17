@@ -18,6 +18,10 @@ window.addEventListener('load', function () {
     showPopupAction(e, false);
   });  
 
+  document.getElementById("work-content").addEventListener('click', () => {
+    showWorkContent(false);
+  });
+
   startClock();
   jsonSiteDataInject();
 })
