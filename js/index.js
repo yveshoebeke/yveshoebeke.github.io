@@ -1,11 +1,11 @@
 window.addEventListener('load', function () {
   // Event listeners
   document.getElementById("email-to-clipboard").addEventListener('click', copyToClipboard);
-  document.getElementById("email-to-clipboard").addEventListener('mouseover', () => {
-    showClipboardAction(true);
+  document.getElementById("email-to-clipboard").addEventListener('mouseover', (e) => {
+    showClipboardAction(e, true);
   });
-  document.getElementById("email-to-clipboard").addEventListener('mouseout', () => {
-    showClipboardAction(false);
+  document.getElementById("email-to-clipboard").addEventListener('mouseout', (e) => {
+    showClipboardAction(e, false);
   });
 
   document.getElementById("work-popup").addEventListener('click', () => {
@@ -56,8 +56,13 @@ function copyToClipboard() {
   }, 2000);
 } 
 
-function showClipboardAction(show) {
+function showClipboardAction(e, show) {
   if(show) {
+    x = e.clientX;
+    y = e.clientY;
+
+    document.getElementById("clipboard-action").style.top = (y-35).toString().concat("px");
+    document.getElementById("clipboard-action").style.left = (x+10).toString().concat("px");
     document.getElementById("clipboard-action").style.visibility = 'visible';
   } else {
     document.getElementById("clipboard-action").style.visibility = 'hidden';
