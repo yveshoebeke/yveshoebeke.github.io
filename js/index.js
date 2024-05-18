@@ -47,6 +47,7 @@ async function jsonSiteDataInject() {
  }
 
 function copyToClipboard() {
+  showClipboardAction(null, false);
   content = document.getElementById("email").innerHTML;
   navigator.clipboard.writeText(content);
 
@@ -71,6 +72,7 @@ function showClipboardAction(e, show) {
 
 function showWorkContent(show) {
   if(show) {
+    showPopupAction(null, false)
     document.getElementById("work-content").style.visibility = 'visible';
     setTimeout(function() {
       document.getElementById("work-content").style.visibility = 'hidden';
