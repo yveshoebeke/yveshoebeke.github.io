@@ -136,6 +136,12 @@ p.email {
     }
 }
 
+p.note {
+    margin: 0px;
+    font-size: smaller;
+    color: rgb(94, 129, 139);
+}
+
 div.content {
     width: 60%;
     margin: auto;

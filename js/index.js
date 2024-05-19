@@ -39,7 +39,10 @@ async function jsonSiteDataInject() {
   const response = await fetch('https://yveshoebeke.github.io/data/yveshoebeke.github.io.json');
   const jsonData = await response.json();
   const time = new Date();
-    
+  
+  // jsonData.worksamples.forEach((obj) => {console.log(obj.company, obj.location,obj.application,obj.technologies)})
+  console.log(jsonData)
+  
   document.getElementById("email").innerHTML = jsonData.email;
   document.getElementById("version").innerHTML = jsonData.version;
   document.getElementById("copy-year").innerHTML = time.getFullYear();

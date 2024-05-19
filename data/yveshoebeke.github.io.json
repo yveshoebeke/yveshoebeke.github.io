@@ -2,5 +2,26 @@
     "version": "v1.0.4",
     "author": "Yves Hoebeke",
     "email": "yves.hoebeke@bytesupply.com",
-    "created": "2024-05-11T16:03:27"
+    "created": "2024-05-11T16:03:27",
+    "test": 19561021,
+    "worksamples": [
+        {
+            "company": "Discovery",
+            "location": "New York, NY",
+            "application": "SSAI (Server Side Ad Insertion)",
+            "technologies": "Go, RestAPI, gRPC, mongoDB, PostgreSQL, AWS RDS(t2)"
+        },
+        {
+            "company": "AMCO, Inc",
+            "location": "Stamford, CT",
+            "application": "Accounting",
+            "technologies": "alphaBASIC, ISAM"
+        },
+        {
+            "company": "AMCO, Inc",
+            "location": "Long Beach, CA",
+            "application": "flying",
+            "technologies": "aerodynamics"
+        }
+    ]
 }
