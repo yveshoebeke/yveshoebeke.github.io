@@ -192,5 +192,5 @@ function countUp() {
       if(years == 25) {
         clearInterval(countIntrv);
       }
-  }, 110);
+  }, 125);
 }
