@@ -1,5 +1,5 @@
 {
-    "version": "v1.0.4",
+    "version": "v1.0.5",
     "author": "Yves Hoebeke",
     "email": "yves.hoebeke@bytesupply.com",
     "created": "2024-05-11T16:03:27",
@@ -8,20 +8,56 @@
         {
             "company": "Discovery",
             "location": "New York, NY",
-            "application": "SSAI (Server Side Ad Insertion)",
-            "technologies": "Go, RestAPI, gRPC, mongoDB, PostgreSQL, AWS RDS(t2)"
+            "application": "SSAI (Server Side Ad Insertion).",
+            "technologies": "Go, RestAPI, gRPC, mongoDB, PostgreSQL, AWS RDS(t2)."
         },
         {
-            "company": "AMCO, Inc",
+            "company": "Accuity Delivery Systems",
+            "location": "New York, NY",
+            "application": "CDI (Clinical Documentation Improvement).",
+            "technologies": "Go, RestAPI, PostgreSQL, some frontend HTML/JS."
+        },
+        {
+            "company": "Benchmark Education",
+            "location": "New Rochelle, NY",
+            "application": "Product evaluation, assembly and distribution tool.",
+            "technologies": "PHP, AMQP, NodeJS, Pyhon, MongoDB, PostgreSQL, soe HTML."
+        },
+        {
+            "company": "eTouches",
+            "location": "Norwalk, CT",
+            "application": "World-wide event planning application.",
+            "technologies": "PHP, MySQL, some frontend HTML/JS."
+        },
+        {
+            "company": "CircleLink Health (formely: MedAdhere)",
             "location": "Stamford, CT",
-            "application": "Accounting",
-            "technologies": "alphaBASIC, ISAM"
+            "application": "Remote patients/test subjects stat retrieval and distibution.",
+            "technologies": "PHP, RestAPI, MySQL, some frontend HTML/JS."
         },
         {
-            "company": "AMCO, Inc",
-            "location": "Long Beach, CA",
-            "application": "flying",
-            "technologies": "aerodynamics"
+            "company": "General Eletric",
+            "location": "Shelton, CT",
+            "application": "Intelectual property data compliance and support.",
+            "technologies": "PHP, NodeJS, AWS RDS, some frontend HTML/JS."
+        },
+        {
+            "company": "Norton Hering Medical",
+            "location": "Santa Ana, CA",
+            "application": "Medical billing and accounting software.",
+            "technologies": "AlphaBasic, M68020 assembly, ISAM(db)."
+        },
+        {
+            "company": "Sherman Grinberg Film Libararies",
+            "location": "Hollywood, CA",
+            "application": "Inventory control.",
+            "technologies": "AlphaBasic, WD16 assembly, ISAM(db)"
+        },
+        {
+            "company": "Microsciences Corp.",
+            "location": "Tarzana, CA",
+            "application": "Accounting and Inventory control application development.",
+            "technologies": "AlphaBasic, WD16 assembly, ISAM(db)"
         }
-    ]
+   ]
 }

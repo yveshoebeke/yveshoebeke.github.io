@@ -53,6 +53,7 @@ div#work-content {
     width: auto;
     visibility:hidden;
     z-index: 10;
+    opacity: .92;
     padding: 10px;
     background-color: rgb(253, 221, 104);
     border: solid 1px rgb(3, 3, 105);
@@ -112,28 +113,24 @@ p.email {
         color: maroon;
     }
 
-    span#on-clipboard {
-        padding: 4px;
-        color: rgb(94, 129, 139);
-        visibility: hidden;
-        border: 1px solid rgb(94, 129, 139);
-        border-radius: 4px;
-    }
-
-    span#clipboard-action {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        padding: 4px;
-        color: rgb(94, 129, 139);
-        visibility: hidden;
-        border: 1px solid rgb(94, 129, 139);
-        border-radius: 4px;   
-    }
-
     img:hover {
         cursor: pointer;
     }
+}
+
+span#clipboard-action, span#on-clipboard {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 4px;
+    color: rgb(94, 129, 139);
+    visibility: hidden;
+    border: 1px solid rgb(94, 129, 139);
+    border-radius: 4px;   
+}
+
+div#pgp {
+    display: none;
 }
 
 p.note {
