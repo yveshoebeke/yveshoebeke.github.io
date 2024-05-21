@@ -39,6 +39,8 @@ window.addEventListener('load', function () {
   startClock();
   // Read json to display some data.
   jsonSiteDataInject();
+  // count up the years...
+  countUp();
 })
 
 // Clock - tik tok...
@@ -179,4 +181,16 @@ function showPopupAction(e, show) {
   } else {
     document.getElementById("popup-action").style.visibility = 'hidden';
   }
+}
+
+function countUp() {
+  var years=0
+  countIntrv = setInterval(() => {
+      years++;
+      strYears = (years < 10) ? "&nbsp;&nbsp;".concat(years.toString()) : years.toString();
+      document.getElementById("years").innerHTML = strYears;
+      if(years == 25) {
+        clearInterval(countIntrv);
+      }
+  }, 110);
 }
