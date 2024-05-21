@@ -69,7 +69,7 @@ async function jsonSiteDataInject() {
       const companyLi = document.createElement("li");
       companyLi.classList.add("company");
       
-      const companyName = document.createTextNode(obj.company + " - " + obj.location);
+      const companyName = document.createTextNode(obj.company.concat(" - ").concat(obj.location));
       companyLi.appendChild(companyName);
       workUl.appendChild(companyLi);
 

@@ -1,5 +1,5 @@
 {
-    "version": "v1.0.5",
+    "version": "v1.0.5x",
     "author": "Yves Hoebeke",
     "email": "yves.hoebeke@bytesupply.com",
     "created": "2024-05-11T16:03:27",
@@ -42,7 +42,7 @@
             "technologies": "PHP, NodeJS, AWS RDS, some frontend HTML/JS."
         },
         {
-            "company": "Norton Hering Medical",
+            "company": "Jefferson Medical Group",
             "location": "Santa Ana, CA",
             "application": "Medical billing and accounting software.",
             "technologies": "AlphaBasic, M68020 assembly, ISAM(db)."
