@@ -152,7 +152,6 @@ function showWorkContent(show) {
     // - toggle click-to-close message on/off at 3 sec.
     var showOnOff = 'hidden';
     intervalId = setInterval(() => {
-      console.log("toggle",showOnOff, intervalId)
       showOnOff = (showOnOff == 'hidden')?'visible':'hidden';
       document.getElementById("click-to-close").style.visibility = showOnOff;
     }, 3000);
