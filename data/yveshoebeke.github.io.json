@@ -42,6 +42,12 @@
             "technologies": "PHP, NodeJS, AWS RDS, some frontend HTML/JS."
         },
         {
+            "company": "Hooked on Phonics, AT&T",
+            "location": "Orange, CA",
+            "application": "High volume PBX architecting, CTI and administration.",
+            "technologies": "C, Informix."
+        },
+        {
             "company": "Jefferson Medical Group",
             "location": "Santa Ana, CA",
             "application": "Medical billing and accounting software.",

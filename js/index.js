@@ -63,12 +63,18 @@ async function jsonSiteDataInject() {
     document.getElementById("version").innerHTML = jsonResponse.version;
     document.getElementById("copy-name").innerHTML = jsonResponse.author;
 
-    // Work samples <div> content construction.
+    // - Work samples <div> content construction as follows:
+    //
+    //    <ul>
+    //      <li>            --> Co. name + location
+    //        <ul>
+    //          <li>        --> Application(s)
+    //          <li>        --> Technologies used
+    //
     const workUl = document.getElementById("work-content-detail")
     jsonResponse.worksamples.forEach((obj) => {
       const companyLi = document.createElement("li");
       companyLi.classList.add("company");
-      
       const companyName = document.createTextNode(obj.company.concat(" - ").concat(obj.location));
       companyLi.appendChild(companyName);
       workUl.appendChild(companyLi);
@@ -96,8 +102,9 @@ async function jsonSiteDataInject() {
 async function copyToClipboard(e, spanId) {
   showClipboardAction(null, false);
 
+  // - pgp key read from file, email from <span> content.
   if(spanId == "pgp") {
-    await fetch('data/yves.pub')
+    await fetch('data/pgp.pub')
     .then((res) => res.text())
     .then((text) => {
       navigator.clipboard.writeText(text);
@@ -134,22 +141,26 @@ function showClipboardAction(e, show) {
 }
 
 // Work <div> display control.
+var intervalId = 0;
 function showWorkContent(show) {
-  var intervalId = 0;
   if(show) {
     showPopupAction(null, false)
     document.getElementById("work-content").style.visibility = 'visible';
+
+    // - toggle click-to-close message on/off at 3 sec.
+    var showOnOff = 'hidden';
+    intervalId = setInterval(() => {
+      console.log("toggle",showOnOff, intervalId)
+      showOnOff = (showOnOff == 'hidden')?'visible':'hidden';
+      document.getElementById("click-to-close").style.visibility = showOnOff;
+    }, 3000);
+ 
+    // - Close work <div> after 1 minute.
     setTimeout(() => {
+      clearInterval(intervalId);
       document.getElementById("work-content").style.visibility = 'hidden';
     }, 60000);
-
-    document.getElementById("click-to-close").style.visibility = 'visible';
-    var visibleOrHidden = 'hidden';
-    intervalId = setInterval(() => {
-      visibleOrHidden = (visibleOrHidden == 'hidden')?'visible':'hidden';
-      document.getElementById("click-to-close").style.visibility = visibleOrHidden;
-    }, 3000);
-  } else {
+ } else {
     clearInterval(intervalId);
     document.getElementById("click-to-close").style.visibility = 'hidden';
     document.getElementById("work-content").style.visibility = 'hidden';
