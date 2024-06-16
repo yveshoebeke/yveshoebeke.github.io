@@ -142,6 +142,7 @@ p.note {
 div.content {
     width: 60%;
     margin: auto;
+    margin-bottom: 25px;
     padding:10px;
     background-color: rgb(255, 246, 210);
     border: solid 1px rgb(3, 3, 105);
