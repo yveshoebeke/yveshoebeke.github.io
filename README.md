@@ -9,4 +9,4 @@
 
 _Check it out here:_ <a href="https://yveshoebeke.github.io">https://yveshoebeke.github.io</a>
 
-<sub>Appreciate you for spending time visiting this!</sub>
+<sub>Appreciate spending time visiting this!</sub>
