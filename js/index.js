@@ -8,6 +8,11 @@ window.addEventListener('load', function () {
   document.getElementById("pgp-to-clipboard").addEventListener('click', (e) => { 
     copyToClipboard(e, 'pgp');
   });
+  document.getElementById("open-resume").addEventListener('click', (e) => { 
+    //copyToClipboard(e, 'pgp'); open resume pdf
+    window.open("docs/yveshoebeke.pdf", '_blank');
+
+  });
 
   //  - show intent popup.
   for (obj of this.document.getElementsByClassName("to-clipboard")){
@@ -18,7 +23,7 @@ window.addEventListener('load', function () {
       showClipboardAction(e, false);
     });
   };
-
+    
   //  - show work done + intent popup.
   document.getElementById("work-popup").addEventListener('click', () => {
     showWorkContent(true);
