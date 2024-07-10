@@ -59,6 +59,7 @@ async function startClock() {
 }
 
 // Read json file and insert in appropriate HTML locations
+// + set featured repositories visibility
 async function jsonSiteDataInject() {
   await fetch('data/yveshoebeke.github.io.json')
   .then((response) => response.json())
@@ -100,7 +101,12 @@ async function jsonSiteDataInject() {
         companyLu.appendChild(companyTechnologiesLi);
 
       workUl.appendChild(companyLu);
-    })
+    });
+
+    // repository div visibilities
+    jsonResponse.repositories.forEach((repObj) => {
+      document.getElementById(repObj.name).style.display = (repObj.display) ? "block" : "none";
+    });
   })
   .catch((e) => console.error(e));
 }
