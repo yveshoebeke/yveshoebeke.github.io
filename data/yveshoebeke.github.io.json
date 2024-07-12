@@ -8,19 +8,19 @@
             "name": "merkletree",
             "display": true,
             "tag": "v1.0.0",
-            "tag_class": "blue"
+            "tagClass": "green"
         },
         {
             "name": "strexplode",
             "display": true,
             "tag": "v2.1.1",
-            "tag_class": "blue"
+            "tagClass": "green"
         },
         {
             "name": "amortization",
             "display": true,
             "tag": "v0.0.2-alpha",
-            "tag_class": "red"
+            "tagClass": "red"
         }
     ],
     "worksamples": [
