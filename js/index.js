@@ -106,6 +106,9 @@ async function jsonSiteDataInject() {
     // repository div visibilities
     jsonResponse.repositories.forEach((repObj) => {
       document.getElementById(repObj.name).style.display = (repObj.display) ? "block" : "none";
+      const tagObj = document.getElementById(repObj.name + "-tag");
+      tagObj.innerText = repObj.tag;
+      tagObj.classList.add(repObj.tagClass);
     });
   })
   .catch((e) => console.error(e));
