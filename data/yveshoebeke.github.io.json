@@ -18,7 +18,7 @@
         },
         {
             "name": "amortization",
-            "display": true,
+            "display": false,
             "tag": "v0.0.2-alpha",
             "tagClass": "red"
         }
