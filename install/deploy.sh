@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # 1. Project source and paths.
-URL_PATH="http://localhost"
+#URL_PATH="http://localhost/install"
+URL_PATH="https://yveshoebeke.github.io/install"
 TAR_BALL="geheim.tar.gz"
 OWD=$(pwd)
 
@@ -13,7 +14,8 @@ cd $TMP_DIR
 
 # 3. Get the tar ball and extract.
 echo "\n\033[33m\033[1mRetrieving build package:\033[0m"
-curl -O "$URL_PATH/$TAR_BALL"
+echo "\033[33m[\033[32m$URL_PATH/$TAR_BALL\033[33m]\033[0m"
+curl -SL "$URL_PATH/$TAR_BALL" -o "$TAR_BALL"
 
 # 4. Extract project files
 echo "\n\033[33m\033[1mExtracting project files:\033[0m"
