@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # 1. Project source and paths.
-#DATA_PATH="http://localhost/data"
 DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="geheim.tar.gz"
 OWD=$(pwd)
