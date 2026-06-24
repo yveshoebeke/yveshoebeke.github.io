@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # 1. Project source and paths.
-#URL_PATH="http://localhost/install"
-URL_PATH="https://yveshoebeke.github.io/install"
+#DATA_PATH="http://localhost/data"
+DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="geheim.tar.gz"
 OWD=$(pwd)
 
@@ -14,8 +14,8 @@ cd $TMP_DIR
 
 # 3. Get the tar ball and extract.
 echo "\n\033[33m\033[1mRetrieving build package:\033[0m"
-echo "\033[33m[\033[32m$URL_PATH/$TAR_BALL\033[33m]\033[0m"
-curl -SL "$URL_PATH/$TAR_BALL" -o "$TAR_BALL"
+echo "\033[33m[\033[32m$iDATA_PATH/$TAR_BALL\033[33m]\033[0m"
+curl -SL "$DATA_PATH/$TAR_BALL" -o "$TAR_BALL"
 
 # 4. Extract project files
 echo "\n\033[33m\033[1mExtracting project files:\033[0m"
@@ -43,8 +43,8 @@ cmd/build.sh
 cd $OWD
 
 # 8. Safe cleanup of the temporary folder.
-echo "\n\033[33m\033[1mRemove temporary work area:\033[0m"
-rm -vrf "$TMP_DIR"
+echo "\n\033[33m\033[1mRemoving temporary work area.\033[0m"
+rm -rf "$TMP_DIR"
 
 # 9. Done.
 echo "\n\033[32m\033[1mGEHEIM - Instalation completed.\033[0m"
