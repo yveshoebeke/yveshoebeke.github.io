@@ -1,8 +1,35 @@
 #!/bin/sh
 
+ABORT=0
+echo "\n\033[33m\033[1mChecking if build tools are installed: \033[0m"
+
+# Check if cmake is installed
+if ! command -v cmake >/dev/null 2>&1; then
+    echo "\033[31m\033[1mError: cmake is required to build this project but was not found." >&2
+    echo "\033[32m\033[1mPlease install cmake using your system's package manager and try again." >&2
+    echo "Example (macOS): brew install cmake - (Ubuntu/Debian): sudo apt install cmake\033[0m" >&2
+    ABORT=1
+fi
+
+# Check if c compiler is installed
+if ! command -v gcc >/dev/null 2>&1 || ! command -v clang >/dev/null 2>&1; then
+    echo "\033[31m\033[1mError: c compiler (gcc or clang) is required to build this project but was not found." >&2
+    echo "\033[32m\033[1mPlease install the c compiler using your system's package manager and try again.\033[0m" >&2
+    ABORT=1
+fi
+
+if [ $ABORT -eq 1 ]; then
+	exit 1
+fi
+
+echo "\033[32m\033[1mPASS\033[0m"
+
 # 1. Project source and paths.
+#DATA_PATH="http://localhost/data"
 DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="geheim.tar.gz"
+CHECKSUMS="SHA1SUMS"
+
 OWD=$(pwd)
 
 # 2. Create a safe temporary directory to untar the code.
@@ -23,7 +50,7 @@ tar -xvzf "$TAR_BALL"
 # 5. Check checksums of source
 if command -v shasum >/dev/null 2>&1; then
 	echo "\033[33m\033[1m\nChecking source integrity.\033[0m"
-	shasum -s -c doc/geheim.shasum
+	shasum -s -c "$CHECKSUMS"
 	if [ $? -eq 0 ]; then
 		echo "\033[32m\033[1mPASS: All files verified successfully.\033[0m"
 	else
