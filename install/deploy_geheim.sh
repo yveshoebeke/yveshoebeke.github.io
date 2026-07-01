@@ -11,6 +11,14 @@ if ! command -v cmake >/dev/null 2>&1; then
     ABORT=1
 fi
 
+# Check if make is installed
+if ! command -v make >/dev/null 2>&1; then
+    echo "\033[31m\033[1mError: make is required to build this project but was not found." >&2
+    echo "\033[32m\033[1mPlease install make using your system's package manager and try again." >&2
+    echo "Example (macOS): brew install make - (Ubuntu/Debian): sudo apt install make\033[0m" >&2
+    ABORT=1
+fi
+
 # Check if c compiler is installed
 if ! command -v gcc >/dev/null 2>&1 || ! command -v clang >/dev/null 2>&1; then
     echo "\033[31m\033[1mError: c compiler (gcc or clang) is required to build this project but was not found." >&2
@@ -25,7 +33,6 @@ fi
 echo "\033[32m\033[1mPASS\033[0m"
 
 # 1. Project source and paths.
-#DATA_PATH="http://localhost/data"
 DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="geheim.tar.gz"
 CHECKSUMS="SHA1SUMS"
@@ -63,7 +70,7 @@ fi
 
 # 6. Now we evoke cmake and build it.
 echo "\n\033[33m\033[1mStart build process:\033[0m"
-cmd/build.sh
+make
 
 # 7. Get out of the temp project folder and start cleaning.
 cd $OWD
