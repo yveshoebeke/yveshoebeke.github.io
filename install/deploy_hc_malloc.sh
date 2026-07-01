@@ -33,7 +33,6 @@ fi
 echo "\033[32m\033[1mPASS\033[0m"
 
 # 1. Project source and paths.
-#DATA_PATH="http://localhost/data"
 DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="hc_malloc.tar.gz"
 CHECKSUMS="SHA1SUMS"
