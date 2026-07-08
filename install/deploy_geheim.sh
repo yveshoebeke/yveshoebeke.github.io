@@ -33,9 +33,9 @@ fi
 echo "\033[32m\033[1mPASS\033[0m"
 
 # check if hc_malloc library is installed, if not install it.
-LIB="/usr/local/lib/libhc_malloc.a"
+HC_MALLOC_LIB="/usr/local/lib/libhc_malloc.a"
 
-if [ ! -f $LIB ]; then
+if [ ! -f $HC_MALLOC_LIB ]; then
 	echo "\033[1;33mInstalling hc_malloc library.\n\033[0m"
 	curl -L https://yveshoebeke.github.io/install/deploy_hc_malloc.sh | sh
 fi
