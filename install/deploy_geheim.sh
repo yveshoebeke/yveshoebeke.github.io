@@ -32,6 +32,14 @@ fi
 
 echo "\033[32m\033[1mPASS\033[0m"
 
+# check if hc_malloc library is installed, if not install it.
+LIB="/usr/local/lib/libhc_malloc.a"
+
+if [ ! -f $LIB ]; then
+	echo "\033[33mInstalling hc_malloc library.\033[0m"
+	curl -L https://yveshoebeke.github.io/install/deploy_hc_malloc.sh | sh
+fi
+
 # 1. Project source and paths.
 DATA_PATH="https://yveshoebeke.github.io/data"
 TAR_BALL="geheim.tar.gz"
